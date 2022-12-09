@@ -1,0 +1,16 @@
+mixin perspective()
+  section.perspective
+    .container
+      .perspective__wrapper
+        h2.perspective__title.title
+          span.overflow
+            span.title__text.title__text--gradient.fib(data-simple-animate) БЕЗУПРЕЧНАЯ
+          span.overflow
+            span.title__text.title__text--decor.fib(data-simple-animate) ПЕРСПЕКТИВА
+        .perspective__video
+          video.lozad(loop, preload="auto", playsinline, muted, poster="./img/content/perspective/perspective-img.jpg")
+            source(type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"', data-src="video/video.mp4")
+        .perspective__play-video
+          button.perspective__play-btn(type="button", aria-label="Смотреть видео")
+          p.perspective__play-text СМОТРЕТЬ ОКРУЖЕНИЕ
+

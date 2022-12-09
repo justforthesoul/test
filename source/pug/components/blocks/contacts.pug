@@ -1,0 +1,49 @@
+mixin contacts()
+  section.contacts
+    .container
+      .contacts__wrapper
+        .contacts__content-block
+          .contacts__address-block
+            h2.contacts__title.title
+              span.overflow
+                span.title__text.title__text--small.title__text--gradient.fib(data-simple-animate) ОФИС
+              span.overflow
+                span.title__text.title__text--small.fib(data-simple-animate) продаж
+            address.contacts__address
+              span.contacts__address-item Санкт-Петербург,
+              span.contacts__address-item Конюшенная площадь, 2Д
+            .contacts__work-time-block
+              .contacts__work-time-item
+                span.contacts__work-day  пн – пт
+                span.contacts__work-time с 09:00 до 21:00
+              .contacts__work-time-item
+                span.contacts__work-day  сб – вс
+                span.contacts__work-time с 10:00 до 20:00
+          .contacts__connection
+            a.contacts__phone-link(href="tel:+78125587463") +7 (812) 558 74 63
+            a.contacts__mail-link(href="mailto:sales@voshodmoscow.ru") sales@voshodmoscow.ru
+          .contacts__img
+            +img("content", "contacts/contacts-office", "jpg", 550, 622, "фото офиса")
+        a.contacts__application-link(href="#", data-open-modal="form")
+          span.contacts__application-text ОСТАВИТЬ ЗАЯВКУ
+          span.contacts__application-icon
+            svg(width='127', height='127', viewBox='0 0 127 127', fill='none', xmlns='http://www.w3.org/2000/svg')
+              path(d='M63.25 126.292L52.0162 115.059L14.2019 77.2443L0.70711 63.7495L63.25 1.20662L125.793 63.7495L63.25 126.292Z', stroke='url(#paint0_linear_175_551)')
+              defs
+                linearGradient#paint0_linear_175_551(x1='31.6316', y1='32.1234', x2='94.88', y2='95.3718', gradientUnits='userSpaceOnUse')
+                  stop(stop-color='#BCB8AF')
+                  stop(offset='0.1683', stop-color='#848175')
+                  stop(offset='0.2969', stop-color='#5F5E50')
+                  stop(offset='0.3647', stop-color='#515042')
+                  stop(offset='0.3855', stop-color='#5C5B4E')
+                  stop(offset='0.4231', stop-color='#79786E')
+                  stop(offset='0.4731', stop-color='#A9A8A1')
+                  stop(offset='0.533', stop-color='#E9E9E7')
+                  stop(offset='0.5518', stop-color='white')
+                  stop(offset='0.5904', stop-color='#DDDCD9')
+                  stop(offset='0.66', stop-color='#A5A39A')
+                  stop(offset='0.7108', stop-color='#827F72')
+                  stop(offset='0.7372', stop-color='#757163')
+                  stop(offset='0.8898', stop-color='#98968E')
+                  stop(offset='1', stop-color='#B3B3AF')
+            +icon("icon-arrow", 42, 24)

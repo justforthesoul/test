@@ -1,0 +1,329 @@
+.contacts {
+  padding: 106px 0 28px 0;
+
+  @include vp-767 {
+    padding: 42px 0 28px 0;
+  }
+
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: -28px 0 36px -5px;
+
+    @include vp-1279 {
+      margin: -8px 0 36px -5px;
+    }
+    @include vp-767 {
+      margin: -8px 0 8px -5px;
+    }
+
+    .overflow:first-child {
+      margin-right: 34px;
+
+      @include vp-767 {
+        margin-right: 11px;
+      }
+      @include vp-374 {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content-block {
+    display: grid;
+    margin-bottom: 141px;
+
+    color: $color-default-white;
+
+    gap: 40px;
+    grid-template-areas: "address img"
+    "connection img";
+    grid-template-columns: 1fr 550px;
+    @include vp-1023 {
+      margin-bottom: 80px;
+
+      grid-template-areas: "address"
+      "img"
+      "connection";
+      grid-template-columns: 1fr;
+    }
+    @include vp-767 {
+      margin-bottom: 69px;
+
+      gap: 43px;
+    }
+  }
+
+  &__address-block {
+    display: flex;
+    flex-direction: column;
+
+    grid-area: address;
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 34px 0;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 39px;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      margin: 0 0 30px 0;
+
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &__work-time-block {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 39px;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &__work-day {
+    margin-right: 20.2%;
+
+    @include vp-767 {
+      margin-right: 28.8%;
+    }
+  }
+
+  &__connection {
+    display: flex;
+    flex-direction: column;
+
+    grid-area: connection;
+  }
+
+  &__phone-link {
+    align-self: start;
+    margin: auto 0 3px 0;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 39px;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      margin: 0 0 8px 0;
+
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &__mail-link {
+    position: relative;
+
+    align-self: start;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 39px;
+    text-transform: uppercase;
+
+    background: $text-gradient;
+    -webkit-background-clip: text;
+            background-clip: text;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 150%;
+    }
+    @include hover-focus {
+      &::before {
+        opacity: 0;
+      }
+    }
+    -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background: $text-gradient;
+
+      transition: opacity $trans-default;
+
+      @include vp-767 {
+        bottom: 4px;
+      }
+    }
+  }
+
+  &__application-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    align-self: start;
+
+    @include vp-1023 {
+      max-width: 502px;
+    }
+    @include vp-767 {
+      max-width: 278px;
+    }
+    @include vp-374 {
+      max-width: 240px;
+    }
+    @include hover-focus {
+      .contacts__application-icon::before {
+        opacity: 1;
+      }
+
+      .contacts__application-icon {
+        color: $color-default-black;
+      }
+    }
+  }
+
+  &__application-text {
+    margin-right: 71px;
+
+    font-weight: 300;
+    font-size: 110px;
+    line-height: 120%;
+    font-family: $ff-copperplate;
+    text-transform: uppercase;
+    letter-spacing: -13.7253px;
+
+    @include vp-1439 {
+      font-size: 90px;
+      letter-spacing: -8px;
+    }
+    @include vp-1023 {
+      font-size: 80px;
+    }
+    @include vp-767 {
+      font-size: 40px;
+      line-height: 130%;
+      letter-spacing: -0.06em;
+    }
+    @include vp-374 {
+      font-size: 32px;
+    }
+  }
+
+  &__application-icon {
+    position: relative;
+
+    flex-shrink: 0;
+    width: 89px;
+    height: 89px;
+
+    transition: color $trans-default;
+
+    @include vp-767 {
+      left: -50px;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: $text-gradient;
+      transform: rotate(45deg);
+      opacity: 0;
+
+      transition: opacity $trans-default;
+
+      @include vp-767 {
+        top: 12%;
+        left: 12%;
+        width: 76%;
+        height: 76%;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      @include vp-767 {
+        &:first-child {
+          width: 105px;
+          height: 105px;
+        }
+      }
+      @include vp-374 {
+        &:first-child {
+          width: 75px;
+          height: 75px;
+        }
+
+        &:last-child {
+          width: 30px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    padding-bottom: 114%;
+    overflow: hidden;
+
+    grid-area: img;
+    @include vp-1023 {
+      margin-right: -30px;
+      margin-left: -30px;
+      padding-bottom: 80%;
+    }
+    @include vp-767 {
+      margin-right: -24px;
+      margin-left: -24px;
+      padding-bottom: 51%;
+    }
+
+    img {
+      position: absolute;
+
+      min-width: 100%;
+      min-height: 115%;
+
+      @include vp-767 {
+        top: -50%;
+      }
+      object-fit: cover;
+    }
+  }
+}

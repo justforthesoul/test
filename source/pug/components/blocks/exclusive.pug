@@ -1,0 +1,65 @@
+mixin exclusive()
+  section.exclusive#down-block
+    .container
+      .exclusive__wrapper
+        h2.exclusive__title.title
+          span.exclusive__title-wrapper
+            span.overflow.exclusive__title-num-wrapper
+              span.exclusive__title-num.fib(data-simple-animate) 12
+            span.overflow.exclusive__title-gradient-wrapper
+              span.exclusive__title-gradient.fib(data-simple-animate) ЭКСКЛЮЗИВНЫХ
+          span.overflow.exclusive__title-text-wrapper
+            span.exclusive__title-text.fibo(data-simple-animate) РЕЗИДЕНЦИЙ
+        .exclusive__info-block.fib(data-simple-animate)
+          span.exclusive__info-text С ПОЛНОЙ ОТДЕЛКОЙ И МЕБЕЛЬЮ
+        .exclusive__img-slider.animate-img-slider
+          .exclusive__img-slider-wrapper.swiper-wrapper
+            .exclusive__img-slide.swiper-slide
+              .exclusive__slide-img
+                +img("content", "exclusive/exclusive-img-1", "jpg", 1000, 715, "Интерьер")
+            .exclusive__img-slide.swiper-slide
+              .exclusive__slide-img
+                +img("content", "exclusive/exclusive-img-2", "jpg", 1000, 563, "Интерьер")
+            .exclusive__img-slide.swiper-slide
+              .exclusive__slide-img
+                +img("content", "exclusive/exclusive-img-3", "jpg", 1000, 663, "Интерьер")
+            .exclusive__img-slide.swiper-slide
+              .exclusive__slide-img
+                +img("content", "exclusive/exclusive-img-4", "jpg", 1000, 1250, "Интерьер")
+            .exclusive__img-slide.swiper-slide
+              .exclusive__slide-img
+                +img("content", "exclusive/exclusive-img-5", "jpg", 1000, 563, "Интерьер")
+            .exclusive__img-slide.swiper-slide
+              .exclusive__slide-img
+                +img("content", "exclusive/exclusive-img-6", "jpg", 1000, 563, "Интерьер")
+            .exclusive__img-slide.swiper-slide
+              .exclusive__slide-img
+                +img("content", "exclusive/exclusive-img-7", "jpg", 1000, 625, "Интерьер")
+            .exclusive__img-slide.swiper-slide
+              .exclusive__slide-img
+                +img("content", "exclusive/exclusive-img-8", "jpg", 1000, 500, "Интерьер")
+            .exclusive__img-slide.exclusive__img-slide--empty.swiper-slide
+              .exclusive__slide-img
+          .exclusive__img-slider-controls
+            button.exclusive__slider-button.slider-button.slider-button--prev(type="button", aria-label="Предидущий слайд")
+            button.exclusive__img-slider-button.slider-button.slider-button--next(type="button", aria-label="Следующий слайд")
+        .exclusive__text-slider.animate-text-slider.swiper
+          .exclusive__text-slider-wrapper.swiper-wrapper
+            .exclusive__text-slide.swiper-slide
+              p.exclusive__slide-text Настоящие дровяные камины, Восстановленные исторические интерьеры парадной гостиной 1
+            .exclusive__text-slide.swiper-slide
+              p.exclusive__slide-text Настоящие дровяные камины, Восстановленные исторические интерьеры парадной гостиной 2
+            .exclusive__text-slide.swiper-slide
+              p.exclusive__slide-text Настоящие дровяные камины, Восстановленные исторические интерьеры парадной гостиной 3
+            .exclusive__text-slide.swiper-slide
+              p.exclusive__slide-text Настоящие дровяные камины, Восстановленные исторические интерьеры парадной гостиной 4
+            .exclusive__text-slide.swiper-slide
+              p.exclusive__slide-text Настоящие дровяные камины, Восстановленные исторические интерьеры парадной гостиной 5
+            .exclusive__text-slide.swiper-slide
+              p.exclusive__slide-text Настоящие дровяные камины, Восстановленные исторические интерьеры парадной гостиной 6
+            .exclusive__text-slide.swiper-slide
+              p.exclusive__slide-text Настоящие дровяные камины, Восстановленные исторические интерьеры парадной гостиной 7
+            .exclusive__text-slide.swiper-slide
+              p.exclusive__slide-text Настоящие дровяные камины, Восстановленные исторические интерьеры парадной гостиной 8
+            .exclusive__text-slide.exclusive__text-slide--empty.swiper-slide
+

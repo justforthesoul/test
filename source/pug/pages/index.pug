@@ -1,0 +1,24 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "CHEVAL COURT"
+  - const currentUrl = "index.html"
+
+block main
+  +loader()
+  +header()
+  div(data-scroll-container)
+    div.scroll-section(data-scroll-section)
+      main
+        h1.visually-hidden Сайт проекта CHEVAL COURT
+        +intro()
+        +exclusive()
+        +interiors()
+        +golden-ratio()
+        +perspective()
+        +contacts()
+      +footer()
+
+block modals
+  +modal("modal--form")(data-modal="form")
+    +modal-form()

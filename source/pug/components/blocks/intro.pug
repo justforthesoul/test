@@ -1,0 +1,62 @@
+mixin intro()
+  .intro
+    .container
+      .intro__wrapper
+        .intro__content-block
+          h2.intro__title.title
+            span.overflow
+              span.title__text.fib(data-simple-animate) НАСЛЕДИЕ
+            .intro__title-wrapper
+              span.overflow
+                span.title__text.title__text--gradient.fib(data-simple-animate) МИРОВОГО
+              span.overflow
+                span.title__text.title__text--gradient.fib(data-simple-animate) УРОВНЯ
+          p.intro__description
+            span.overflow
+              span.intro__description-text.fibo(data-simple-animate) Камерная роскошь эпохи Русского Возрождения
+        .intro__img-block.fio(data-simple-animate)
+          a.intro__down-link(href="#", aria-label="Переместится к следующему экрану", data-scroll-to="down-block")
+            span.intro__down-icon
+              svg(width='127', height='127', viewBox='0 0 127 127', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M63.25 126.292L52.0162 115.059L14.2019 77.2443L0.70711 63.7495L63.25 1.20662L125.793 63.7495L63.25 126.292Z', stroke='url(#paint0_linear_175_551)')
+                defs
+                  linearGradient#paint0_linear_175_551(x1='31.6316', y1='32.1234', x2='94.88', y2='95.3718', gradientUnits='userSpaceOnUse')
+                    stop(stop-color='#BCB8AF')
+                    stop(offset='0.1683', stop-color='#848175')
+                    stop(offset='0.2969', stop-color='#5F5E50')
+                    stop(offset='0.3647', stop-color='#515042')
+                    stop(offset='0.3855', stop-color='#5C5B4E')
+                    stop(offset='0.4231', stop-color='#79786E')
+                    stop(offset='0.4731', stop-color='#A9A8A1')
+                    stop(offset='0.533', stop-color='#E9E9E7')
+                    stop(offset='0.5518', stop-color='white')
+                    stop(offset='0.5904', stop-color='#DDDCD9')
+                    stop(offset='0.66', stop-color='#A5A39A')
+                    stop(offset='0.7108', stop-color='#827F72')
+                    stop(offset='0.7372', stop-color='#757163')
+                    stop(offset='0.8898', stop-color='#98968E')
+                    stop(offset='1', stop-color='#B3B3AF')
+              svg(width='19', height='34', viewBox='0 0 19 34', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd', clip-rule='evenodd', d='M10.2251 31.574L10.2251 0H9.22513L9.22514 32.0116L0.77742 23.5639L0.0703125 24.271L9.15281 33.3535L9.50636 33.707L9.85991 33.3535L18.9424 24.271L18.2353 23.5639L10.2251 31.574Z', fill='url(#paint0_linear_142_757)')
+                defs
+                  linearGradient#paint0_linear_142_757(x1='7', y1='77.0001', x2='26', y2='-26.9999', gradientUnits='userSpaceOnUse')
+                    stop(stop-color='#BCB8AF')
+                    stop(offset='0.1683', stop-color='#848175')
+                    stop(offset='0.2969', stop-color='#5F5E50')
+                    stop(offset='0.3647', stop-color='#515042')
+                    stop(offset='0.3855', stop-color='#5C5B4E')
+                    stop(offset='0.4231', stop-color='#79786E')
+                    stop(offset='0.4731', stop-color='#A9A8A1')
+                    stop(offset='0.533', stop-color='#E9E9E7')
+                    stop(offset='0.5518', stop-color='white')
+                    stop(offset='0.5904', stop-color='#DDDCD9')
+                    stop(offset='0.66', stop-color='#A5A39A')
+                    stop(offset='0.7108', stop-color='#827F72')
+                    stop(offset='0.7372', stop-color='#757163')
+                    stop(offset='0.8898', stop-color='#98968E')
+                    stop(offset='1', stop-color='#B3B3AF')
+          .intro__img-block-border-wrapper
+            .intro__img-block-border
+          .intro__img-block-wrapper
+            +img("content", "intro/intro-img", "jpg", 1268, 848, "Интерьер")
+
