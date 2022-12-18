@@ -30,7 +30,6 @@
     @include vp-1023 {
       margin: 0 0 43px 0;
     }
-
     @include vp-767 {
       width: 106px;
       height: 33px;
@@ -59,9 +58,9 @@
     }
     @include vp-767 {
       width: 110%;
+      max-width: 364px;
       margin: 0 -14px 16px -14px;
       padding-right: 10px;
-      max-width: 364px;
     }
 
     span:nth-child(2) {
@@ -123,7 +122,7 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -136,6 +135,7 @@
 
     label {
       display: block;
+
       font-weight: 300;
       font-size: 50px;
       line-height: 100%;
@@ -145,7 +145,7 @@
 
       background: $text-gradient;
       -webkit-background-clip: text;
-      background-clip: text;
+              background-clip: text;
       transform: translateY(54px);
       transform-origin: left;
       opacity: 0.3;
@@ -162,7 +162,7 @@
         transform: translateY(44px);
       }
       -webkit-text-fill-color: transparent;
-      text-fill-color: transparent;
+              text-fill-color: transparent;
     }
 
     input {
@@ -248,7 +248,7 @@
 
     background: $text-gradient;
     -webkit-background-clip: text;
-    background-clip: text;
+            background-clip: text;
 
     @include vp-1023 {
       margin: 0 0 12px 0;
@@ -261,7 +261,7 @@
       letter-spacing: -1px;
     }
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+            text-fill-color: transparent;
   }
 
   &__form-description {
@@ -288,16 +288,16 @@
     display: grid;
     margin: 0 16% 31px 0;
     padding: 0;
+
     border: none;
+
+    transition: opacity $trans-default;
 
     gap: 20px;
     grid-template-columns: 1fr;
-    transition: opacity $trans-default;
-
     @include vp-1023 {
       margin: 0 0 31px 0;
     }
-
     @include vp-767 {
       justify-content: center;
       width: 101%;
@@ -306,14 +306,14 @@
       gap: 12px;
       grid-template-columns: 102px 102px 102px;
     }
-
     @include vp-374 {
       grid-template-columns: 89px 89px 89px;
     }
 
     &:disabled {
-      pointer-events: none;
       opacity: 0.3;
+
+      pointer-events: none;
     }
   }
 
@@ -384,7 +384,7 @@
 
       &:checked + span {
         -webkit-text-fill-color: $color-default-white;
-        text-fill-color: $color-default-white;
+                text-fill-color: $color-default-white;
       }
     }
 
@@ -412,9 +412,6 @@
         background: $text-gradient;
         -webkit-background-clip: text;
                 background-clip: text;
-        -webkit-text-fill-color: transparent;
-                text-fill-color: transparent;
-
         border-radius: 8px;
         cursor: pointer;
 
@@ -434,15 +431,17 @@
         }
         @include hover {
           -webkit-text-fill-color: $color-default-white;
-          text-fill-color: $color-default-white;
+                  text-fill-color: $color-default-white;
 
           &::after {
-           opacity: 1;
+            opacity: 1;
           }
         }
+        -webkit-text-fill-color: transparent;
+                text-fill-color: transparent;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
@@ -451,17 +450,17 @@
           width: 100%;
           height: 100%;
 
-          background-image: url('../img/svg/icon-checkbox-border.svg');
+          background-image: url("../img/svg/icon-checkbox-border.svg");
           background-repeat: no-repeat;
           background-size: contain;
 
           @include vp-767 {
-            background-image: url('../img/svg/icon-checkbox-border-mobile.svg');
+            background-image: url("../img/svg/icon-checkbox-border-mobile.svg");
           }
         }
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
@@ -470,7 +469,25 @@
           width: 100%;
           height: 100%;
 
-          background: linear-gradient(66.89deg, rgba(188, 184, 175, 0.7) -198%, rgba(132, 129, 117, 0.7) -141.48%, rgba(95, 94, 80, 0.7) -98.28%, rgba(81, 80, 66, 0.7) -75.51%, rgba(92, 91, 78, 0.7) -68.53%, rgba(121, 120, 110, 0.7) -55.9%, rgba(169, 168, 161, 0.7) -39.11%, rgba(233, 233, 231, 0.7) -18.99%, rgba(255, 255, 255, 0.7) -12.67%, rgba(221, 220, 217, 0.7) 0.29%, rgba(165, 163, 154, 0.7) 23.67%, rgba(130, 127, 114, 0.7) 40.73%, rgba(117, 113, 99, 0.7) 49.6%, rgba(152, 150, 142, 0.7) 100.85%, rgba(179, 179, 175, 0.7) 137.86%), #898989;
+          background: linear-gradient(
+          66.89deg,
+          rgba(188, 184, 175, 0.7) -198%,
+          rgba(132, 129, 117, 0.7) -141.48%,
+          rgba(95, 94, 80, 0.7) -98.28%,
+          rgba(81, 80, 66, 0.7) -75.51%,
+          rgba(92, 91, 78, 0.7) -68.53%,
+          rgba(121, 120, 110, 0.7) -55.9%,
+          rgba(169, 168, 161, 0.7) -39.11%,
+          rgba(233, 233, 231, 0.7) -18.99%,
+          rgba(255, 255, 255, 0.7) -12.67%,
+          rgba(221, 220, 217, 0.7) 0.29%,
+          rgba(165, 163, 154, 0.7) 23.67%,
+          rgba(130, 127, 114, 0.7) 40.73%,
+          rgba(117, 113, 99, 0.7) 49.6%,
+          rgba(152, 150, 142, 0.7) 100.85%,
+          rgba(179, 179, 175, 0.7) 137.86%
+          ),
+          #898989;
           border-radius: 8px;
           opacity: 0;
 
@@ -492,15 +509,15 @@
 
     background: $text-gradient;
     -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+            background-clip: text;
 
     @include vp-767 {
       margin: 0;
 
       text-align: center;
     }
+    -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
   }
 
   &__checkbox-any-time {
@@ -533,7 +550,7 @@
       }
 
       &:checked + span::after {
-        background: url('../img/svg/icon-checkbox-check.svg');
+        background: url("../img/svg/icon-checkbox-check.svg");
         background-repeat: no-repeat;
         background-position: center;
       }
@@ -557,7 +574,7 @@
 
       background: $text-gradient;
       -webkit-background-clip: text;
-      background-clip: text;
+              background-clip: text;
       cursor: pointer;
 
       transition: opacity $trans-default;
@@ -570,10 +587,10 @@
         line-height: 20px;
       }
       -webkit-text-fill-color: transparent;
-      text-fill-color: transparent;
+              text-fill-color: transparent;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -582,7 +599,7 @@
         width: 24px;
         height: 24px;
 
-        background-image: url('../img/svg/icon-checkbox-agreement-border.svg');
+        background-image: url("../img/svg/icon-checkbox-agreement-border.svg");
         background-repeat: no-repeat;
         background-size: contain;
 
@@ -593,7 +610,7 @@
       }
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -653,7 +670,7 @@
       }
 
       &:checked + label::after {
-        background: url('../img/svg/icon-checkbox-check.svg');
+        background: url("../img/svg/icon-checkbox-check.svg");
         background-repeat: no-repeat;
         background-position: center;
       }
@@ -680,7 +697,7 @@
       }
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -689,7 +706,7 @@
         width: 24px;
         height: 24px;
 
-        background-image: url('../img/svg/icon-checkbox-agreement-border.svg');
+        background-image: url("../img/svg/icon-checkbox-agreement-border.svg");
         background-repeat: no-repeat;
         background-size: contain;
 
@@ -700,7 +717,7 @@
       }
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -738,8 +755,8 @@
   &__submit-btn {
     position: relative;
     z-index: 1;
-    display: inline;
 
+    display: inline;
     margin: 0 3% 20px 0;
     padding: 22px 60px;
 
@@ -748,32 +765,23 @@
     line-height: 100%;
     font-family: $ff-copperplate;
     text-align: center;
-    text-transform: uppercase;
-    border: none;
-    background-color: $color-transparent;
     color: $color-default-white;
+    text-transform: uppercase;
 
+    background-color: $color-transparent;
+    border: none;
     cursor: pointer;
 
     transition: opacity $trans-default;
-
-    span {
-      background: $text-gradient;
-        -webkit-background-clip: text;
-                background-clip: text;
-        -webkit-text-fill-color: transparent;
-                text-fill-color: transparent;
-    }
 
     @include vp-767 {
       margin: 0 0 30px 0;
       padding: 22px 61px;
     }
-
     @include hover-focus {
       span {
         -webkit-text-fill-color: $color-default-white;
-        text-fill-color: $color-default-white;
+                text-fill-color: $color-default-white;
       }
 
       &::after {
@@ -781,8 +789,17 @@
       }
     }
 
+    span {
+      background: $text-gradient;
+      -webkit-background-clip: text;
+              background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+              text-fill-color: transparent;
+    }
+
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -791,13 +808,13 @@
       width: 100%;
       height: 100%;
 
-      background-image: url('../img/svg/icon-button-border.svg');
+      background-image: url("../img/svg/icon-button-border.svg");
       background-repeat: no-repeat;
       background-size: contain;
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -806,7 +823,25 @@
       width: 100%;
       height: 100%;
 
-      background: linear-gradient(66.89deg, rgba(188, 184, 175, 0.7) -198%, rgba(132, 129, 117, 0.7) -141.48%, rgba(95, 94, 80, 0.7) -98.28%, rgba(81, 80, 66, 0.7) -75.51%, rgba(92, 91, 78, 0.7) -68.53%, rgba(121, 120, 110, 0.7) -55.9%, rgba(169, 168, 161, 0.7) -39.11%, rgba(233, 233, 231, 0.7) -18.99%, rgba(255, 255, 255, 0.7) -12.67%, rgba(221, 220, 217, 0.7) 0.29%, rgba(165, 163, 154, 0.7) 23.67%, rgba(130, 127, 114, 0.7) 40.73%, rgba(117, 113, 99, 0.7) 49.6%, rgba(152, 150, 142, 0.7) 100.85%, rgba(179, 179, 175, 0.7) 137.86%), #898989;
+      background: linear-gradient(
+      66.89deg,
+      rgba(188, 184, 175, 0.7) -198%,
+      rgba(132, 129, 117, 0.7) -141.48%,
+      rgba(95, 94, 80, 0.7) -98.28%,
+      rgba(81, 80, 66, 0.7) -75.51%,
+      rgba(92, 91, 78, 0.7) -68.53%,
+      rgba(121, 120, 110, 0.7) -55.9%,
+      rgba(169, 168, 161, 0.7) -39.11%,
+      rgba(233, 233, 231, 0.7) -18.99%,
+      rgba(255, 255, 255, 0.7) -12.67%,
+      rgba(221, 220, 217, 0.7) 0.29%,
+      rgba(165, 163, 154, 0.7) 23.67%,
+      rgba(130, 127, 114, 0.7) 40.73%,
+      rgba(117, 113, 99, 0.7) 49.6%,
+      rgba(152, 150, 142, 0.7) 100.85%,
+      rgba(179, 179, 175, 0.7) 137.86%
+      ),
+      #898989;
       opacity: 0;
 
       transition: opacity $trans-default;
