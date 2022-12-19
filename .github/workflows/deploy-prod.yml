@@ -3,22 +3,20 @@ name: deploy-prod
 on: workflow_dispatch
 
 jobs:
-  Explore-GitHub-Actions:
+  deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [ 16.x ]
     steps:
-      - uses: actions/checkout@v3
-      - name: Starting Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+      - uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Instal modules
-        run: npm instal
-      - name: Build project
+          node-version: '16'
+      # Build
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
         run: npm run build
-      - name: create build
+      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: build
