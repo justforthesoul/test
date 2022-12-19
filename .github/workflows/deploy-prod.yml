@@ -1,0 +1,26 @@
+name: deploy-dev
+
+on: workflow_dispatch
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Starting Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Instal modules
+        run: npm instal
+      - name: Build project
+        run: npm run build
+      - name: create build
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: build
+          folder: build
+          clean: true
