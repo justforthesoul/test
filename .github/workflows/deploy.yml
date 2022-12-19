@@ -1,5 +1,7 @@
 name: deploy
-on: [push]
+on:
+  push:
+    branches: [ master ]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -16,5 +18,3 @@ jobs:
         run: npm instal
       - name: Build project
         run: npm run build
-
-
